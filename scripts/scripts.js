@@ -29,14 +29,19 @@ let duration = 0
 // INSERT YOUR CODE HERE
 
 function recalculate(){
+    
     let costLabel = document.getElementById("calculated-cost")
+   
     if (modelName === "XYZ"){
         let totalCost = duration * 100
+        costLabel.innerHTML = totalCost
+        
     }
     if (modelName === "CPRG"){
         let totalCost = duration * 213
+        costLabel.innerHTML = totalCost
     }
-    costLabel.innerHTML = totalCost
+    
 }
 
 
@@ -57,13 +62,14 @@ function recalculate(){
 // INSERT YOUR CODE HERE
 let modelButton = document.getElementById("model-button")
 
-function changeModel(modelName){
+function changeModel(){
 let modelText = document.getElementById("model-text")
-if (modelName ==="XYZ"){
+
+if (modelName =="XYZ"){
     modelName = "CPRG"
     modelText.innerHTML = "Model CPRG"
 }
-else if (modelName === "CPRG"){
+else if (modelName == "CPRG"){
     modelName = "XYZ"
     modelText.innerHTML = "Model XYZ"
 }
