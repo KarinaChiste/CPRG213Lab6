@@ -28,7 +28,16 @@ const duration = document.getElementById("duration-text")
 
 // INSERT YOUR CODE HERE
 
-
+function recalculate(){
+    let costLabel = document.getElementById("calculated-cost")
+    if (modelName.innerHTML === "Model XYZ"){
+        let totalCost = duration * 100
+    }
+    if (modelName.innerHTML === "Model CPRG"){
+        let totalCost = duration * 213
+    }
+    costLabel.innerHTML = totalCost
+}
 
 
 
