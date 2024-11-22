@@ -63,7 +63,7 @@ if (modelName ==="XYZ"){
     modelName = "CPRG"
     modelText.innerHTML = "Model CPRG"
 }
-if (modelName === "CPRG"){
+else if (modelName === "CPRG"){
     modelName = "XYZ"
     modelText.innerHTML = "Model XYZ"
 }
@@ -88,6 +88,15 @@ modelButton.addEventListener("click", changeModel)
 */
 
 // INSERT YOUR CODE HERE
+let durationButton = document.getElementById("duration-button")
+
+function changeDuration(){
+let durationText = document.getElementById("duration-text")
+let newDuration = prompt("Enter New Duration: ")
+duration = newDuration
+durationText.innerHTML = newDuration
+recalculate()
+}
 
 
-
+durationButton.addEventListener("click", changeDuration)
